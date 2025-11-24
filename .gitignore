@@ -1,0 +1,87 @@
+# ========================================
+# Python & Poetry Project - .gitignore
+# Compatible with PyCharm / JetBrains IDEs
+# ========================================
+
+# --- Python compiled / cache files ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Virtual environments ---
+.venv/
+venv/
+env/
+ENV/
+.venv*/
+poetry.lock.bak
+
+# --- Distribution / packaging ---
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+
+# --- Jupyter / notebooks / checkpoints ---
+.ipynb_checkpoints/
+*.ipynb~
+
+# --- Unit test / coverage ---
+.coverage
+htmlcov/
+.tox/
+.nox/
+.cache/
+.pytest_cache/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pyre/
+.mypy_cache/
+.dmypy.json
+cython_debug/
+
+# --- PyCharm / JetBrains IDE ---
+.idea/
+# Uncomment if you share run configs with teammates:
+# !.idea/runConfigurations/
+
+# --- Logs & temp files ---
+*.log
+*.tmp
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# --- Credentials / secrets ---
+.env
+.env.*
+*.pem
+*.key
+*.json
+secrets.toml
+
+# --- Misc. ---
+# Ignore local scripts or notebook caches
+notebooks/.ipynb_checkpoints
+__MACOSX/
+
+# --- VS Code ---
+.vscode/
+
+# Ignore all files that end with config.yml
+**/*config.yml
+# But do NOT ignore files that contain 'example' before .yml
+!**/*example*.yml
+
+**/results/*.csv
+# Exclude from ignoring metrics summary for ranking task
+!**/results/ranking_proposal_metrics.csv
+
+**/.env
+**/dataset

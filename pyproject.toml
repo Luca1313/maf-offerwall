@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "maf-offerwall"
+version = "0.1.0"
+description = "Project to suite exercise for MAF group"
+authors = ["Luca Rubboli <luca.rubboli@libero.it>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pandas = "^2.3.3"
+google-cloud-bigquery = "^3.38.0"
+pandas-gbq = "^0.29.2"
+google-cloud-resource-manager = "^1.14.2"
+google-cloud-bigquery-storage = "^2.33.1"
+matplotlib = "^3.10.7"
+scipy = "^1.16.2"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.4.2"
+poethepoet = "^0.37.0"
+
+[tool.poe.tasks]
+run_analysis = { shell = "cd analysis && poetry run poe run_analysis" }
+run_forecast = { shell = "cd analysis && poetry run poe run_forecast" }
+run_ranking = { shell = "cd ranking && poetry run poe run_ranking" }
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
