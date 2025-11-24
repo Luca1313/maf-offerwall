@@ -1,0 +1,13 @@
+TABLE: 'my-table'
+TABLES:
+  'my-sub-table-1': 'my-sub-table-1-name'
+  'my-sub-table-2': 'my-sub-table-2-name'
+DECIMALS: 4
+SMOOTH_WINDOW: 5
+IMPRESSION_THRESHOLD: 1000
+ERPM_MEDIAN_FACTOR: 5
+QUANTILE: 0.715
+TARGET_SE: 0.02
+VENDOR_BINS: 10
+POSITION_BINS: 10
+POSITION_BIN_STEP: 10

@@ -1,0 +1,12 @@
+TABLE: 'my-table'
+TABLES:
+  'my-sub-table-1': 'my-sub-table-1-name'
+  'my-sub-table-2': 'my-sub-table-2-name'
+DECIMALS: 4
+POSITIONS:
+  - [sup_lim_1, inf_limit_1]
+  - [sup_lim_2, inf_limit_2]
+METRICS:
+  - "my_metric_to_consider_1"
+  - "my_metric_to_consider_2"
+
