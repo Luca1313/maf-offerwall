@@ -1,0 +1,38 @@
+[project]
+name = "analysis"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Luca Rubboli",email = "luca.rubboli@libero.it"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pandas = "^2.3.3"
+google-cloud-bigquery = "^3.38.0"
+pandas-gbq = "^0.29.2"
+google-cloud-resource-manager = "^1.14.2"
+google-cloud-bigquery-storage = "^2.33.1"
+matplotlib = "^3.10.7"
+scipy = "^1.16.2"
+seaborn = "^0.13.2"
+holidays = "^0.83"
+kneed = "^0.8.5"
+scikit-learn = "^1.7.2"
+statsmodels = "^0.14.5"
+pyyaml = "^6.0.3"
+dotenv = "^0.9.9"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.4.2"
+poethepoet = "^0.37.0"
+
+[tool.poe.tasks]
+run_analysis = "python ./src/analysis/analysis.py"
+run_forecast = "python ./src/analysis/forecast.py"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
