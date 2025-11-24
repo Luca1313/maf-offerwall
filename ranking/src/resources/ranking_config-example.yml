@@ -1,0 +1,16 @@
+TABLE: 'my-table'
+TABLES:
+  'my-sub-table-1': 'my-sub-table-1-name'
+  'my-sub-table-2': 'my-sub-table-2-name'
+DECIMALS: 4
+NEAR_EQUAL_TOL: 0.01
+MIN_EPSILON: 0.05
+MIN_IMPR_FOR_BIAS: 5
+MAX_DEBIAS_FACTOR: 10.0
+WINDOW_WEIGHTS:
+  window_day_up_to_1_numerical: weight_1
+  window_day_up_to_2_numerical: weight_2
+  "older": weight_older
+VENDOR_BINS: 5
+POSITION_BINS: 20
+POSITION_BIN_STEP: 5
