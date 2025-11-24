@@ -4,8 +4,19 @@
 
 In order to authenticate on gcloud-cli, following commands must be executed, providing authentication token of google:
 
-`brew install --cask gcloud-cli`
-`gcloud auth application-default login`
+```bash
+brew install --cask gcloud-cli
+```
+
+```bash
+gcloud auth application-default login
+```
+
+```bash
+curl -sSL https://install.python-poetry.org | python3 -
+export PATH="$HOME/.local/bin:$PATH"
+poetry --version
+```
 
 ## Configurations
 
@@ -154,7 +165,23 @@ The generated output is collected in `results` folder, and consists of:
 
 ## Poetry tasks
 
+`Poe` tasks has been defined to make easier to run all the provided programs from both the root project and the root of packages
+
+```bash
+poetry poe run_analysis
+poetry poe run_forecast
+poetry poe run_ranking
 ```
-`Poe` tasks has been defined to make easier to run all the provided programs from both the root project and the root of packages:
-`poetry poe run_analysis`, `poetry poe run_forecast` and `poetry poe run_ranking`
+
+Each package should be added to the root project in editable mode:
+
+```bash
+poetry add -e ./analysis
+poetry add -e ./ranking
+```
+
+Then, install all dependencies in the root environment, in the root project directory:
+
+```bash
+poetry install --no-root
 ```
